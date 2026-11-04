@@ -268,7 +268,7 @@ def pdf_button(doc_id: str, label: str, key: str):
     if not doc or not library.source_pdf(doc):
         return
     st.download_button(label, data=lambda: library.pdf_bytes(doc_id) or b"", file_name=library.source_pdf(doc).name,
-                       mime="application/pdf", key=key, on_click="ignore", icon="📄", type="tertiary")
+                       mime="application/pdf", key=key, icon="📄", type="tertiary")
 
 
 def render_findings(findings: list[Finding]):
